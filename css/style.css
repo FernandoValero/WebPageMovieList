@@ -5,18 +5,72 @@
     font-family: 1poopins1, sans-serif;
 }
 
-body {
+/*Barra de Navegacion
+*/
+
+nav{
+    position: absolute;
+    z-index: 10;
+    left: 0;
+    right: 0;
+    top: 0;
+    padding: 0 5%;
+    height: 100px;
+}
+nav .logo img {
+    float: left;
+    width: 100px;
+    height: 100px;
+}
+nav .list{
+    float: right;
+    padding: 0;
+    margin: 0;
+    width: 60%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+nav .list li{
+    list-style: none;
+}
+nav .list a{
+    display: block;
+    text-transform: uppercase;
+    padding: 15px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #fff;
+    text-decoration: none;
+}
+nav .list a:hover{
+    border-bottom: 4px solid #b32727;
+}
+#toggle{
+    position: absolute;
+    top: -100px;
+}
+nav .icon-bara {
+    display: none;
+    position:absolute;
+    right: 5%;
+    top: 50%;
+    transform: translateY(-50%);
+}
+/*Inicio de Sesion/Registrarse*/
+body.check ,.log {
     display: flex;
     align-items: center;
     justify-content: center;
     min-height: 100vh;
-    background-image: url("../images/image1png");
+    background-image: url("../images/background.jpg");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
 }
 
-section {
+section.user{
     position: relative;
     max-width: 400px;
     background-color: transparent;
@@ -62,7 +116,7 @@ section {
 
 h1 {
     font-size: 2rem;
-    color: #fff;
+    color:black;
     text-align: center;
 }
 
@@ -100,3 +154,34 @@ input:valid ~ label {
     color: #fff;
 }
 
+/*Contenido de la pàgina de inicio*/
+section{
+    position: relative;
+}
+
+.cont{
+    /*padding-top: 100px;*/
+    /* background-color: #fff; */
+        width: 100%;
+            /* Ancho de la imagen */
+            height: 850px;
+            /* Alto de la imagen */
+            overflow: hidden;
+}
+.poster{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: relative;
+}
+.fade {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 50px;
+    /* Altura del área de desvanecimiento */
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 100%);
+    pointer-events: none;
+    /* Evita que el gradiente afecte los elementos debajo */
+}

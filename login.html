@@ -4,11 +4,28 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="./css/style.css">
     <script src='main.js'></script>
 </head>
-<body>
-    <section>
+<body class="log">
+    <header>
+        <nav>
+            <input type="checkbox" id="toggle">
+            <div class="logo">
+                <img src="./images/Logo.png" alt="Logo de la página">
+            </div>
+            <ul class="list">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="peliculas.html">Peliculas</a></li>
+                <li><a href="series.html">Series</a></li>
+                <li><a href="anime.html">Anime</a></li>
+                <li><a href="novela.html">Novela</a></li>
+                <li><a href="buscar.html">Buscar</a></li>
+                <li><a href="sesion.html">Sesion</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section class="user">
         <form>
             <h1>Iniciar Sesion</h1>
             <div class="inputbox">
@@ -23,11 +40,14 @@
                 <label for=""><input type="checkbox">Recuerdame</label>
                 <a href="#">Olvide mi Contraseña</a>
             </div>
-            <button>Iniciar</button>
+            <button href="index.html">Iniciar</button>
             <div class="register">
-                <p>No tengo una cuenta <a href="#">Registrarse</a></p>
+                <p>No tengo una cuenta <a href="checkin.html">Registrarse</a></p>
             </div>
         </form>
     </section>
+    <footer>
+
+    </footer>
 </body>
 </html>
