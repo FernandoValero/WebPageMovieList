@@ -5,6 +5,9 @@
     font-family: 1poopins1, sans-serif;
 }
 
+.home{
+    background-color: black;
+}
 /*Barra de Navegacion
 */
 
@@ -42,6 +45,8 @@ nav .list a{
     font-size: 16px;
     font-weight: bold;
     color: #fff;
+    border-color: black;
+    border-radius: 10px;
     text-decoration: none;
 }
 nav .list a:hover{
@@ -158,22 +163,39 @@ input:valid ~ label {
 section{
     position: relative;
 }
-
+/*
 .cont{
     /*padding-top: 100px;*/
-    /* background-color: #fff; */
+    /* background-color: #fff; 
         width: 100%;
-            /* Ancho de la imagen */
+            /* Ancho de la imagen 
             height: 850px;
-            /* Alto de la imagen */
+            /* Alto de la imagen 
             overflow: hidden;
+}*/
+
+.container-sliders{
+    width: 100%;
+    height: 850px;
+    overflow: hidden;
 }
-.poster{
+.sliders{
+    width: 500%;
+    height: 100%;
+    display: flex;/* Todas las imagenes se posicionaran a lado de la otra*/
+    overflow: hidden;
+}
+.slider-section{
+    width: calc(100%/5);
+    height: 100%;
+}
+.poster {
     width: 100%;
     height: 100%;
     object-fit: cover;
     position: relative;
 }
+
 .fade {
     position: absolute;
     bottom: 0;
@@ -181,7 +203,36 @@ section{
     width: 100%;
     height: 50px;
     /* Altura del área de desvanecimiento */
-    background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 100%);
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgb(0, 0, 0) 100%);
     pointer-events: none;
     /* Evita que el gradiente afecte los elementos debajo */
+}
+
+.btn-left,
+.btn-right{
+    display: flex;
+    position: absolute;
+    top: 50%;
+    font-size: 2.5rem;
+    background-color: transparent;
+    color: #fff;
+    padding: 5px;
+    font-weight: 600;
+    cursor: pointer;
+    transform: translate(0.-50%);
+    transition: .5s ease;
+    user-select: none;
+    z-index: 9999;
+}
+
+.btn-left:hover,
+.btn-right:hover{
+    background-color: #362727;
+    color: #fff;
+}
+.btn-left{
+    left: 10px;
+}
+.btn-right{
+    right: 10px;
 }

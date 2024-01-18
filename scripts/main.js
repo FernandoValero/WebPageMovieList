@@ -1,9 +1,29 @@
-const miTitulo = document.querySelector("h1");
-miTitulo.textContent = "Que pasa gil";
+const btnLeft = document.querySelector(".btn-left"),
+      btnRight = document.querySelector(".btn-right"),
+      slider= document.querySelector("#slider"),
+      sliderSection = document.querySelectorAll(".slider-section");
 
-function presion() {
-   alert("Se presiono el boton");
+btnRight.addEventListener("click", e => moveToRight())
+btnLeft.addEventListener("click", e => moveToLeft())
+let operacion = 0;
+   widthImg = 100/sliderSection.length;
+
+setInterval(() => {
+   moveToRight();
+}, 5000);
+function moveToRight() {
+   operacion = operacion + widthImg
+   if (operacion === 100) {
+      operacion = 0;
+   }
+   slider.style.transform = `translate(-${operacion}%)`
+   slider.style.transition = "all ease 1.5s"
 }
-
-var botn = document.getElementById("boton");
-botn.addEventListener("click",presion);
+function moveToLeft(){
+   operacion = operacion - widthImg
+   if (operacion === -widthImg) {
+      operacion = widthImg * sliderSection.length - widthImg;
+   }
+   slider.style.transform = `translate(-${operacion}%)`
+   slider.style.transition = "all ease .6s"
+}
